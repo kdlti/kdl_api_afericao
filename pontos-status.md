@@ -15,7 +15,7 @@ Como parte da URI se faz necessário definir o dia, mês e ano a ser consultado,
 | body    | `Array<string>` | Lista de identificadores de etiquetas (idEtiqueta) que deverá ser utilizadas no filtro de busca |
 
 
-##### Parametros:
+##### Parâmetros:
 | Indentificador | Tipo   | Default   |  Descrição                                                                        | 
 | -------------- | -------| :--------:| :------------------------------------------------------------------------------   | 
 | hora           | `int` |  **Todas** | Hora para realizar consulta de informações dos pontos comissionados               |
@@ -64,7 +64,7 @@ Por default o resultado da consulta retorna as informações **consolidadas** do
 ##### Bloco DATA:
 | Indentificador | Tipo | Descrição                                                | 
 | ------ | ---------| :------------------------------------------                  | 
-| ultimoStatus | `object` | Consolidação do resultado dos indicadores encontrados  | 
+| ultimoStatus | `object` | Consolidação do resultados encontrados  | 
 
 **Para reduzir o tempo necessários para obter respostas do serviço da API, o bloco de resultados `consolidado` pode opcionalmente ser removido da consulta através da passagem de parâmetros*
 

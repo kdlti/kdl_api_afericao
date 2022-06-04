@@ -9,7 +9,7 @@ Como parte da URI se faz necessário definir o mês e ano a ser consultado.
 | --- | --- | :-----------                                               | 
 | GET | `/pontos-comissionados/0/0000` | api-afericao.kdltelegestao.com.br/pontos-comissionados/4/2022 |
 
-##### Parametros:
+##### Parâmetros:
 | Indentificador | Tipo   | Default   |  Descrição                                                                        | 
 | -------------- | -------| :--------:| :------------------------------------------------------------------------------   | 
 | consolidado    | `bool` |  **true** | Indica se deve ou não retornar os dados consolidados dos indicadores encontrados  |
@@ -60,7 +60,7 @@ Por default o resultado da consulta retorna as informações **consolidadas** do
 | Indentificador | Tipo | Descrição                                                | 
 | ------ | ---------| :------------------------------------------                  | 
 | pontosComissionados| `object` | Informações sobre os pontos comissionados        | 
-| consolidado* | `object` | Consolidação do resultado dos indicadores encontrados  | 
+| consolidado* | `object` | Consolidação do resultados encontrados  | 
 
 **Para reduzir o tempo necessários para obter respostas do serviço da API, o bloco de resultados `consolidado` pode opcionalmente ser removido da consulta através da passagem de parâmetros*
 
