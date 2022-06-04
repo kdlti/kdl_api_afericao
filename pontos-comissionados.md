@@ -5,27 +5,27 @@ Este endpoint é resposável pela entrega de informações da telegestão dos po
 
 Como parte da URI é necessário definir o mês e ano a ser consultado.
 
-| Método | URI | Exemplo                                                    | 
-| --- | --- | :-----------                                               | 
-| GET | `/pontos-comissionados/0/0000` | api-afericao.kdltelegestao.com.br/pontos-comissionados/4/2022 |
+| Método |  Parâmetros | URI | Exemplo                                                    | 
+| --- | :---: | --- | :-----------                                               | 
+| GET | SIM | `/pontos-comissionados/0/0000` | api-afericao.kdltelegestao.com.br/pontos-comissionados/4/2022 |
 
-##### Parâmetros:
+##### Parâmetros opcionais:
 | Indentificador | Tipo   | Default   |  Descrição                                                                        | 
 | -------------- | -------| :--------:| :------------------------------------------------------------------------------   | 
-| consolidado    | `bool` |  **true** | Indica se deve ou não retornar os dados consolidados dos indicadores encontrados  |
+| limit          | `int`  |  **1000** | Quantidade de itens retornados na página de resultado                             |
+| offset     | `int`  |  **0**    | O número de documentos a serem ignorados no conjunto de resultados.                                           |
+| subPrefeitura     | `string`  |  -    | Identificador da subPrefeitura |
 
-
-#### Dados consolidado
-Por default o resultado da consulta retorna as informações **consolidadas** dos pontos comissionados. Esta informação pode ser retirada do resultado da consulta através da passagem do parâmetro `consolidado=false`.
-| Método | URI | Parâmetro | Exemplo      | 
-| --- | --- | ----------| :----------- | 
-| GET | `/pontos-comissionados/0/0000` | ?consolidado=false | api-afericao.kdltelegestao.com.br/pontos-comissionados/4/2022?consolidado=false |
+| Exemplo de uso dos parâmetros       | 
+| :----------- | 
+| ?limit=200&offset=500&subPrefeitura=LAPA |
 
 ### Exemplo do Resultado:
 ``` json
 {
   "data": {
-    "pontosComissionados": [
+    "type": "Pontos Comissionados",
+    "result": [
       {
         "etiqueta": "IP00000002A",
         "subPrefeitura": "LAPA",
@@ -33,48 +33,35 @@ Por default o resultado da consulta retorna as informações **consolidadas** do
         "latLng": [0.000000, 0.000000]
       }
     ],
-    "consolidado": {
-      "ano": 2022,
-      "mes": 4
-    }
   },
   "total": 1,
-  "pageNumber": 1,
+  "offset": 0,
   "limit": 1000,
   "success": true,
-  "elapsedTime": "123.18722s"
+  "elapsedTime": "123.18s"
 }
 ```
 ### Dicionário do Resultado:
 ##### Bloco PRINCIPAL:
 | Indentificador | Tipo | Descrição | 
-| ------ | ---------| :------------------------------------------ | 
-| data   | `object` | Resultado da consulta                       | 
-| total  | `int`    | Quantidade de itens encontrados             | 
-| pageNumber  | `int` | Número da página de resultado             | 
-| limit  | `int`    | Quantidade de itens retornados por página   | 
-| success| `bool`   | Status de sucesso/falha da interação        | 
-| elapsedTime   | `string` | Tempo de duração da consulta         |  
+| :------ | ---------| :-----------------------------------------                  | 
+| data   | `object` | Resultado da consulta                                        | 
+| total  | `int`    | Quantidade de itens encontrados                              | 
+| limit  | `int`    | Quantidade de itens retornados por página                    | 
+| offset | `int`    | O número de documentos a serem ignorados no conjunto de resultados.  |
+| success| `bool`   | Status de sucesso/falha da interação                         | 
+| elapsedTime   | `string` | Tempo de duração da consulta                          | 
 
 ##### Bloco DATA:
 | Indentificador | Tipo | Descrição                                                | 
-| ------ | ---------| :------------------------------------------                  | 
-| pontosComissionados| `object` | Informações sobre os pontos comissionados        | 
-| consolidado* | `object` | Consolidação do resultados encontrados  | 
+| :------ | ---------| :------------------------------------------                 | 
+| type   | `string` | Identifica o tipo de indicador consultado                    | 
+| result| `array<object>` | Lista de peças encontradas                             |
 
-**Para reduzir o tempo necessários para obter respostas do serviço da API, o bloco de resultados `consolidado` pode opcionalmente ser removido da consulta através da passagem de parâmetros*
-
-##### Bloco CONSOLIDADO:
-| Indentificador | Tipo | Descrição | 
-| ------------------- | ------| :------------------------------------------        | 
-| ano                 | `int`    | Ano                                             | 
-| mes                 | `int`    | Mês                                             | 
-
-
-##### Bloco PONTOS COMISSIONADOS:
-| Indentificador | Tipo | Descrição | 
+##### Bloco RESULT:
+| :Indentificador | Tipo | Descrição | 
 | ------------------- | ------   | :------------------------------------------     | 
 | etiqueta            | `string` | Identificador universal da luminária            | 
 | subPrefeitura       | `string` | Identificador da SubPrefeitura                  | 
-| comissionadoEm | `date`    | Data do comissionamento da luminária                | 
+| comissionadoEm | `string`    | Data do comissionamento da luminária                | 
 | latLng  | `array<float>`    | Posição geográfica da lumiária                     | 

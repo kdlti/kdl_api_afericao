@@ -87,8 +87,8 @@ Para recuperar informações detalhadas de uma única peça comissionada para es
         "status": 1,
         "luminosidade": 0,
       }
-    }
-  ],
+    }],
+  },
   "total": 2,
   "offset": 0,
   "limit": 1000,
@@ -115,16 +115,16 @@ Para recuperar informações detalhadas de uma única peça comissionada para es
 
 ##### Bloco RESULT:
 | Indentificador | Tipo | Descrição | 
-| :------------------- | ------   | :------------------------------------------     | 
+| :------------------- | ------   | :------------------------------------------    | 
 | etiqueta            | `string` | Identificador universal da luminária            | 
 | subPrefeitura       | `string` | Identificador da SubPrefeitura                  | 
 | comissionadoEm      | `string` | Dia do comissionamento da peça                  | 
-| latLng              | `array<float>` | Latitude e Longitude                            | 
+| latLng              | `array<float>` | Latitude e Longitude                      | 
 | registradoEm        | `string` | Data e Hora do registro dos dados               | 
 | historico           | `object` | Registra o histórico diário de interações da peça    |
 
 ##### Bloco HISTORICO:
 | Indentificador | Tipo     | Descrição | 
-| :-------------- | ---------| :------------------------------------------          | 
-| status         | `int`  | 0 = Desligado, 1 = Ligado                            |
+| :-------------- | ---------| :------------------------------------------         | 
+| status         | `int`  | 0 = Desligado, 1 = Ligado                              |
 | luminosidade   | `float`  | Entre 0 e 1 - Sendo que, quanto mais próximo do valor 0 deve ser considerado escuro e mais próximo do valor 1 deve ser condiderado claro. |
