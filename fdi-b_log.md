@@ -14,10 +14,11 @@ Como parte da URI se faz necessário definir o dia, mês, ano e a etiqueta de id
 | Indentificador | Tipo   | Default   |  Descrição                                                                        | 
 | -------------- | -------| :--------:| :------------------------------------------------------------------------------   | 
 | hora   | `string|int`  |  **00** | Se informado o parâmetro hora, será retornado somente os resultados encontrado no intervalo da hora do dia/mês/ano solicitado. Por default são retornas todos registro criados no dia/mês/ano solicitado. |
+| resumo   | `bool`  |  **true** | Indica se deve ou não retornar os dados resumidos dos indicadores encontrados  |
 
 | Método | URI | Exemplo                                                    | 
 | --- | --- | :-----------                                               | 
-| GET | `/fdi-b/00/00/0000/IP00000A?hora=15` | api-afericao.kdltelegestao.com.br/fdi-b/10/05/2022/IP00001A?hora=15 |
+| GET | `/fdi-b/00/00/0000/IP00000A?resumo=false&hora=15` | api-afericao.kdltelegestao.com.br/fdi-b/10/05/2022/IP00001A?resumo=false&hora=15 |
 
 ##### Autorização:
 O token de autorização deve ser enviado no header da consulta.
@@ -42,9 +43,9 @@ request({
 ### Exemplo do Resultado:
 ``` json
 {
-  "data": [{
+  "data": {
     "tipo": "FDI-b",
-    "log": {
+    "log": [{
       "etiqueta": "IP00001",
       "subPrefeitura": "LAPA",
       "comissionadoEm": "15/04/2022",
@@ -54,15 +55,15 @@ request({
         "status": 1,
         "luminosidade": 0,
       }
-    },
-    "resumo": {
-        "ano": 2022,
-        "mes": 5,
-        "dia": 31,
-        "hora": 15,
-      }
     }
   ],
+  "resumo": {
+      "ano": 2022,
+      "mes": 5,
+      "dia": 31,
+      "hora": 15,
+    }
+  },
   "total": 1,
   "success": true,
   "elapsedTime": "123.18s"
