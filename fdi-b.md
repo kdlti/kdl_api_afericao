@@ -126,23 +126,23 @@ request({
 ### Dicionário do Resultado:
 ##### Bloco PRINCIPAL:
 | Indentificador | Tipo | Descrição | 
-| :------ | ---------| :------------------------------------------ | 
-| data   | `object` | Resultado da consulta                       | 
-| total  | `int`    | Quantidade de itens encontrados             | 
-| limit  | `int`    | Quantidade de itens retornados por página   | 
+| :------ | ---------| :-----------------------------------------                  | 
+| data   | `object` | Resultado da consulta                                        | 
+| total  | `int`    | Quantidade de itens encontrados                              | 
+| limit  | `int`    | Quantidade de itens retornados por página                    | 
 | offset | `int`    | O número de documentos a serem ignorados no conjunto de resultados.  |
-| success| `bool`   | Status de sucesso/falha da interação        | 
+| success| `bool`   | Status de sucesso/falha da interação                         | 
 | elapsedTime   | `string` | Tempo de duração da consulta                          | 
 
 ##### Bloco DATA:
 | Indentificador | Tipo | Descrição                                                | 
-| :------ | ---------| :------------------------------------------                  | 
+| :------ | ---------| :------------------------------------------                 | 
 | type   | `string` | Identifica o tipo de indicador consultado                    | 
-| result| `array<object>` | Lista de peças encontradas                       | 
+| result| `array<object>` | Lista de peças encontradas                             | 
 
-##### Bloco CONSOLIDADOS:
+##### Bloco RESULT:
 | Indentificador | Tipo | Descrição | 
-| :------------------- | ------   | :------------------------------------------     | 
+| :------------------- | ------   | :-----------------------------------------     | 
 | etiqueta            | `string` | Identificador universal da luminária            | 
 | subPrefeitura       | `string` | Identificador da SubPrefeitura                  | 
 | comissionadoEm      | `string` | Dia do comissionamento da peça                  | 
