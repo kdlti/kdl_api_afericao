@@ -3,7 +3,7 @@
 
 Este endpoint é resposável pela entrega de informações da telegestão dos pontos comissionados.
 
-Como parte da URI se faz necessário definir o mês e ano a ser consultado.
+Como parte da URI é necessário definir o mês e ano a ser consultado.
 
 | Método | URI | Exemplo                                                    | 
 | --- | --- | :-----------                                               | 

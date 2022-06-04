@@ -4,7 +4,7 @@
 
 Este endpoint é resposável pela entrega do log de registro da telegestão do indicador F3.
 
-Como parte da URI se faz necessário definir o dia, mês, ano e a etiqueta de identificação da peça.
+Como parte da URI é necessário definir o dia, mês, ano e a etiqueta de identificação da peça.
 
 | Método | URI | Exemplo                                                    | 
 | --- | --- | :-----------                                               | 
@@ -87,6 +87,6 @@ request({
 | etiqueta            | `string` | Identificador universal da luminária            | 
 | subPrefeitura       | `string` | Identificador da SubPrefeitura                  | 
 | comissionadoEm      | `string` | Dia do comissionamento da peça                  | 
-| latLng              | `string` | Latitude e Longitude                            | 
+| latLng              | `array<float>` | Latitude e Longitude                            | 
 | registradoEm        | `string` | Data e Hora do registro dos dados               | 
 | conectadoEm         | `date` | Data e Hora em que a peça foi conectada           | 

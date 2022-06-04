@@ -4,12 +4,6 @@
 
 Este endpoint é resposável pela entrega do log de registro da telegestão do indicador FDI-b.
 
-Como parte da URI se faz necessário definir o mês e ano a ser consultado.
-
-| Método | URI | Exemplo                                                    | 
-| --- | --- | :-----------                                               | 
-| GET | `/fdi-b/log/00/0000` | api-afericao.kdltelegestao.com.br/fdi-b/log/04/2022 |
-
 ##### Autorização:
 O token de autorização deve ser enviado no header da consulta.
 ```javascript
@@ -30,32 +24,29 @@ request({
 });
 ```
 
+Como parte da URI é necessário definir o mês e ano a ser consultado.
+
+| Método | Parâmetros | URI | Exemplo                                                    | 
+| --- | :---: | --- |:-----------                                               | 
+| GET | SIM |`/fdi-b/log/00/0000` | api-afericao.kdltelegestao.com.br/fdi-b/log/04/2022 |
+
 ##### Parâmetros opcionais:
 | Indentificador | Tipo   | Default   |  Descrição                                                                        | 
 | -------------- | -------| :--------:| :------------------------------------------------------------------------------   | 
 | limit          | `int`  |  **1000** | Quantidade de itens retornados na página de resultado                             |
 | offset     | `int`  |  **0**    | O número de documentos a serem ignorados no conjunto de resultados.                                           |
+| subPrefeitura     | `string`  |  -    | Identificador da subPrefeitura |
 
-#### Filtro por Subprefeitura
-Para recuperar informações consolidadas das peças comissionadas para este indicador agrupadas por subprefeituras se faz necessário definir como parte da URI o mês e ano, incluíndo o parâmetro `subPrefeitura=LAPA`.
-
-| Método | URI | Parâmetro | Exemplo      | 
-| --- | --- | ----------| :----------- | 
-| GET | `/fdi-b/log/00/0000` | ?subPrefeitura=LAPA | api-afericao.kdltelegestao.com.br/fdi-b/log/04/2022?subPrefeitura=LAPA |
-
-#### Detalhamento de uma única peça
-Para recuperar informações detalhadas de uma única peça comissionada para este indicador se faz necessário definir como parte da URI o mês, ano e a etiqueta de identificação da peça.
-
-| Método | URI |  Exemplo      | 
-| --- | --- |  :----------- | 
-| GET | `/fdi-b/log/00/0000/IP00000A` | api-afericao.kdltelegestao.com.br/fdi-b/log/04/2022/IP00000A | 
+| Exemplo de uso dos parâmetros       | 
+| :----------- | 
+| ?limit=200&offset=500&subPrefeitura=LAPA |
 
 #### Consulta de amostras
-Para recuperar informações detalhadas de um conjunto de amostras de peças comissionadas para este indicador se faz necessário passar como body da consulta a lista de identificadores de etiqueta das peças a serem consultadas.
+Para recuperar informações detalhadas de um conjunto de amostras de peças comissionadas para este indicador é necessário passar como body da consulta a lista de identificadores de etiqueta das peças a serem consultadas.
 
-| Método | URI |  Exemplo      | 
-| --- | --- |  :----------- | 
-| POST | `/fdi-b/log/00/0000` | api-afericao.kdltelegestao.com.br/fdi-b/log/04/2022 | 
+| Método | Parâmetros |  URI |  Exemplo      | 
+| --- | :---: | --- |  :----------- | 
+| POST | SIM |`/fdi-b/log/00/0000` | api-afericao.kdltelegestao.com.br/fdi-b/log/04/2022 | 
 
 ```javascript
 var request = require('request');
@@ -73,6 +64,13 @@ request({
     console.log(response);
 });
 ```
+
+#### Detalhamento de uma única peça
+Para recuperar informações detalhadas de uma única peça comissionada para este indicador é necessário definir como parte da URI o mês, ano e a etiqueta de identificação da peça.
+
+| Método |  Parâmetros | URI |  Exemplo      | 
+| --- | :---: | --- | :----------- | 
+| GET | NÃO |`/fdi-b/log/00/0000/IP00000A` | api-afericao.kdltelegestao.com.br/fdi-b/log/04/2022/IP00000A | 
 
 ### Exemplo do Resultado:
 ``` json
@@ -121,12 +119,12 @@ request({
 | etiqueta            | `string` | Identificador universal da luminária            | 
 | subPrefeitura       | `string` | Identificador da SubPrefeitura                  | 
 | comissionadoEm      | `string` | Dia do comissionamento da peça                  | 
-| latLng              | `string` | Latitude e Longitude                            | 
+| latLng              | `array<float>` | Latitude e Longitude                            | 
 | registradoEm        | `string` | Data e Hora do registro dos dados               | 
 | historico           | `object` | Registra o histórico diário de interações da peça    |
 
 ##### Bloco HISTORICO:
 | Indentificador | Tipo     | Descrição | 
 | :-------------- | ---------| :------------------------------------------          | 
-| status         | `float`  | 0 = Desligado, 1 = Ligado                            |
+| status         | `int`  | 0 = Desligado, 1 = Ligado                            |
 | luminosidade   | `float`  | Entre 0 e 1 - Sendo que, quanto mais próximo do valor 0 deve ser considerado escuro e mais próximo do valor 1 deve ser condiderado claro. |

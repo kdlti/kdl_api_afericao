@@ -4,7 +4,7 @@
 
 Este endpoint é resposável pela entrega do log de registro da telegestão do indicador F1.
 
-Como parte da URI se faz necessário definir o dia, mês, ano e a etiqueta de identificação da peça.
+Como parte da URI é necessário definir o dia, mês, ano e a etiqueta de identificação da peça.
 
 | Método | URI | Exemplo                                                    | 
 | --- | --- | :-----------                                               | 
