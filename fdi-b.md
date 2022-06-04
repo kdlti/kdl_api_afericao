@@ -1,6 +1,6 @@
 # Indicador FDI-b
 ### KDL API REST para Aferição de Indicadores
-######*versão 1.0.0*
+*versão 1.0.0*
 
 Este endpoint é resposável pela entrega de informações da telegestão do indicador FDI-b.
 

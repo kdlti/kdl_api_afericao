@@ -1,6 +1,6 @@
 # Indicador F3 (LOG)
 ### KDL API REST para Aferição de Indicadores
-######*versão 1.0.0*
+*versão 1.0.0*
 
 Este endpoint é resposável pela entrega do log de registro da telegestão do indicador F3.
 
