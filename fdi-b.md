@@ -33,7 +33,6 @@ request({
 ##### Parâmetros opcionais:
 | Indentificador | Tipo   | Default   |  Descrição                                                                        | 
 | -------------- | -------| :--------:| :------------------------------------------------------------------------------   | 
-| resumo   | `bool`  |  **true** | Indica se deve ou não retornar os dados resumidos dos indicadores encontrados  |
 | limit          | `int`  |  **1000** | Quantidade de itens retornados na página de resultado                             |
 | offset     | `int`  |  **0**    | O número de documentos a serem ignorados no conjunto de resultados.                                           |
 
@@ -78,61 +77,50 @@ request({
 ### Exemplo do Resultado:
 ``` json
 {
-    "data": {
-        "tipo": "FDI-b",
-        "consolidados": [
-            {
-                "etiqueta": "IP00000002A",
-                "subPrefeitura": "LAPA",
-                "comissionadoEm": "15/04/2022",
-                "latLng": [0.000000, 0.000000],
-                "consolidadoEm": "2022-05-31T14:51:21.728+00:00",
-                "minutosNecessarios": 18000,
-                "minutosLigado": 18000,
-                "diasMonitorado": 31,
-                "resultado": "100%",
-                "status": 1,
-                "dias": {
-                    "01": {
-                        "horas":{
-                            "18":60,
-                            "19":60
-                        },
-                        "historico": {
-                            "18:15": {
-                                "status": 1,
-                                "luminosidade": 0.35
-                            },
-                            "18:25": {
-                                "status": 1,
-                                "luminosidade": 0
-                            },
-                            "19:10": {
-                                "status": 1,
-                                "luminosidade": 0
-                            }
-                        },
-                        "minutosLigados": 600
-                    }
-                }
-            },
-        ],
-        "resumo": {
-            "ano": 2022,
-            "mes": 5,
-            "pontosComissionados": 3,
-            "minutosNecessarios": 18600,
-            "minutosLigado": 600,
-            "diasMonitorado": 31,
-            "resultado": "0.19%",
-            "status": 1
-        }
-    },
-    "total": 2,
-    "offset": 0,
-    "limit": 1000,
-    "success": true,
-    "elapsedTime": "123.18s"
+  "data": {
+    "type": "FDI-b",
+    "result": [{
+              "etiqueta": "IP00000002A",
+              "subPrefeitura": "LAPA",
+              "comissionadoEm": "15/04/2022",
+              "latLng": [0.000000, 0.000000],
+              "consolidadoEm": "2022-05-31T14:51:21.728+00:00",
+              "minutosNecessarios": 18000,
+              "minutosLigado": 18000,
+              "diasMonitorado": 31,
+              "resultado": "100%",
+              "status": 1,
+              "dias": {
+                  "01": {
+                      "horas":{
+                          "18":60,
+                          "19":60
+                      },
+                      "historico": {
+                          "18:15": {
+                              "status": 1,
+                              "luminosidade": 0.35
+                          },
+                          "18:25": {
+                              "status": 1,
+                              "luminosidade": 0
+                          },
+                          "19:10": {
+                              "status": 1,
+                              "luminosidade": 0
+                          }
+                      },
+                      "minutosLigados": 600
+                  }
+              }
+          }
+      ]
+  },
+  "total": 2,
+  "offset": 0,
+  "limit": 1000,
+  "success": true,
+  "elapsedTime": "123.18s"
 }
 ```
 ### Dicionário do Resultado:
@@ -149,9 +137,8 @@ request({
 ##### Bloco DATA:
 | Indentificador | Tipo | Descrição                                                | 
 | ------ | ---------| :------------------------------------------                  | 
-| tipo   | `string` | Identifica o tipo de indicador consultado                    | 
-| consolidados| `array<object>` | Lista de peças encontradas                       | 
-| resumo | `object` | Resumo da query e resultados retornados                      | 
+| type   | `string` | Identifica o tipo de indicador consultado                    | 
+| result| `array<object>` | Lista de peças encontradas                       | 
 
 ##### Bloco CONSOLIDADOS:
 | Indentificador | Tipo | Descrição | 
@@ -186,15 +173,3 @@ request({
 | -------------- | ---------| :------------------------------------------          | 
 | status         | `float`  | 0 = Desligado, 1 = Ligado                            |
 | luminosidade   | `float`  | Entre 0 e 1 - Sendo que, quanto mais próximo do valor 0 deve ser considerado escuro e mais próximo do valor 1 deve ser condiderado claro. |
-
-##### Bloco RESUMO:
-| Indentificador | Tipo | Descrição | 
-| ------------------- | ------| :------------------------------------------        | 
-| ano                 | `int`    | Ano                                             | 
-| mes                 | `int`    | Mês                                             | 
-| pontosComissionados | `int`    | Quantidade de pontos comissionados              | 
-| minutosNecessarios  | `int`    | Quantidade de minutos necessários ligado        | 
-| minutosLigado       | `int`    | Quantidade de minutos efetivamente ligado       | 
-| diasMonitorado      | `int`    | Quantidade de dias monitorado                   | 
-| resultado           | `string` | Resultado do cálculo da fórmula em porcentagem  | 
-| status              | `float`  | Resultado do cálculo da fórmula em decimal      | 
