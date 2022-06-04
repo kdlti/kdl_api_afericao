@@ -126,7 +126,7 @@ request({
 ### Dicionário do Resultado:
 ##### Bloco PRINCIPAL:
 | Indentificador | Tipo | Descrição | 
-| ------ | ---------| :------------------------------------------ | 
+| :------ | ---------| :------------------------------------------ | 
 | data   | `object` | Resultado da consulta                       | 
 | total  | `int`    | Quantidade de itens encontrados             | 
 | limit  | `int`    | Quantidade de itens retornados por página   | 
@@ -136,13 +136,13 @@ request({
 
 ##### Bloco DATA:
 | Indentificador | Tipo | Descrição                                                | 
-| ------ | ---------| :------------------------------------------                  | 
+| :------ | ---------| :------------------------------------------                  | 
 | type   | `string` | Identifica o tipo de indicador consultado                    | 
 | result| `array<object>` | Lista de peças encontradas                       | 
 
 ##### Bloco CONSOLIDADOS:
 | Indentificador | Tipo | Descrição | 
-| ------------------- | ------   | :------------------------------------------     | 
+| :------------------- | ------   | :------------------------------------------     | 
 | etiqueta            | `string` | Identificador universal da luminária            | 
 | subPrefeitura       | `string` | Identificador da SubPrefeitura                  | 
 | comissionadoEm      | `string` | Dia do comissionamento da peça                  | 
@@ -157,7 +157,7 @@ request({
 
 ##### Bloco DIAS:
 | Indentificador | Tipo | Descrição | 
-| -------------- | ---------| :------------------------------------------          | 
+| :-------------- | ---------| :------------------------------------------          | 
 | 0~31           | `string` | Identificador do dia monitorado                      | 
 | horas          | `string` | Identificador da hora monitorado                     |
 | historico      | `object` | Registra o histórico diário de interações da peça    |
@@ -165,11 +165,11 @@ request({
 
 ##### Bloco HORAS:
 | Indentificador | Tipo     | Descrição | 
-| -------------- | ---------| :------------------------------------------          | 
+| :-------------- | ---------| :------------------------------------------          | 
 | 0~23           | `int` | Quantidade de minutos ligado durante a noite            |
 
 ##### Bloco HISTORICO:
 | Indentificador | Tipo     | Descrição | 
-| -------------- | ---------| :------------------------------------------          | 
+| :-------------- | ---------| :------------------------------------------          | 
 | status         | `float`  | 0 = Desligado, 1 = Ligado                            |
 | luminosidade   | `float`  | Entre 0 e 1 - Sendo que, quanto mais próximo do valor 0 deve ser considerado escuro e mais próximo do valor 1 deve ser condiderado claro. |
