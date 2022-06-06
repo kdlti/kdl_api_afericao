@@ -75,10 +75,7 @@ Como parte da URI é necessário definir o dia, mês, ano e a etiqueta de identi
 | elapsedTime   | `string` | Tempo de duração da consulta                          | 
 
 ##### Bloco DATA:
-| Indentificador | Tipo | Descrição                                                | 
-| :------ | ---------| :------------------------------------------                 | 
-| type   | `string` | Identifica o tipo de indicador consultado                    | 
-| result| `array<object>` | Lista de peças encontradas                             | 
+| Indentificador | Tipo | Descrição                              
 
 ##### Bloco RESULT:
 | Indentificador | Tipo | Descrição | 
