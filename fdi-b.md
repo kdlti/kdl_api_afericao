@@ -91,10 +91,6 @@ Para recuperar informações detalhadas de uma única peça comissionada para es
               "status": 1,
               "dias": {
                   "01": {
-                      "horas":{
-                          "18":60,
-                          "19":60
-                      },
                       "historico": {
                           "18:15": {
                               "status": 1,
@@ -158,14 +154,8 @@ Para recuperar informações detalhadas de uma única peça comissionada para es
 | Indentificador | Tipo | Descrição | 
 | :-------------- | ---------| :------------------------------------------          | 
 | 0~31           | `string` | Identificador do dia monitorado                      | 
-| horas          | `object` | Identificador da hora monitorado                     |
 | historico      | `object` | Registra o histórico diário de interações da peça    |
 | minutosLigado  | `int`    | Soma de todos os minutos ligados no dia              |
-
-##### Bloco HORAS:
-| Indentificador | Tipo     | Descrição | 
-| :-------------- | ---------| :------------------------------------------          | 
-| 0~23           | `int` | Quantidade de minutos ligado durante a noite            |
 
 ##### Bloco HISTORICO:
 | Indentificador | Tipo     | Descrição | 
