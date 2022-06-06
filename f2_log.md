@@ -58,7 +58,7 @@ Como parte da URI é necessário definir o mês e ano a ser consultado.
           "tipo": "Sem comunicação",
           "detectadoEm": "2022-05-07T11:10:17.000+00:00",
           "informadoEm": "2022-05-07T11:14:27.000+00:00",
-          "tempoDecorrido": "00:04:10",
+          "tempo": "00:04:10",
           "status": 0
         },
       }
@@ -105,5 +105,5 @@ Como parte da URI é necessário definir o mês e ano a ser consultado.
 | tipo           | `string` | Identificador do tipo de falha                       |
 | detectadoEm    | `string`   | Momento em que o concentrador registra que uma falha foi observada|
 | informadoEm    | `string`   | Momento em que a telegestão torna disponível a informação para utilização pelo CCO|
-| tempoDecorrido    | `string`   | Duração entre o tempo decorrido do momento em que o concentrador observou a falha e o momento em que a informação foi disponibilizada para uso do CCO|
+| tempo    | `string`   | Duração entre o tempo decorrido do momento em que o concentrador observou a falha e o momento em que a informação foi disponibilizada para uso do CCO|
 | status           | `int` | Status indica se a falha está sendo informada dentro do tempo limite necessário (0 = Não está em conformidade / 1 = Está em conformidade)|
