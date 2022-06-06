@@ -65,7 +65,7 @@ Como parte da URI é necessário definir o dia, mês, ano e a etiqueta de identi
 ```
 ### Dicionário do Resultado:
 ##### Bloco PRINCIPAL:
-| Indentificador | Tipo | Descrição | 
+| Identificador | Tipo | Descrição | 
 | :------ | ---------| :-----------------------------------------                  | 
 | data   | `object` | Resultado da consulta                                        | 
 | total  | `int`    | Quantidade de itens encontrados                              | 
@@ -75,10 +75,10 @@ Como parte da URI é necessário definir o dia, mês, ano e a etiqueta de identi
 | elapsedTime   | `string` | Tempo de duração da consulta                          | 
 
 ##### Bloco DATA:
-| Indentificador | Tipo | Descrição                              
+| Identificador | Tipo | Descrição                              
 
 ##### Bloco RESULT:
-| Indentificador | Tipo | Descrição | 
+| Identificador | Tipo | Descrição | 
 | :------------------- | ------   | :------------------------------------------     | 
 | transmissoesNecessarias | `int`    | Quantidade de transmissões necessárias      | 
 | transmissoesRecebidas  | `int`    | Quantidade de transmissões recebidas         | 
@@ -88,13 +88,13 @@ Como parte da URI é necessário definir o dia, mês, ano e a etiqueta de identi
 | dias                | `object`    | Envolve o bloco de dias monitorado              | 
 
 ##### Bloco DIAS:
-| Indentificador | Tipo | Descrição | 
+| Identificador | Tipo | Descrição | 
 | :-------------- | ---------| :------------------------------------------          | 
 | 0~31           | `string` | Identificador do dia monitorado                      | 
 | horas          | `object` | Identificador da hora monitorado                     |
 | transmissoesRecebidas  | `int`    | Quantidade de transmissões recebidas no dia  |
 
 ##### Bloco HORAS:
-| Indentificador | Tipo     | Descrição | 
+| Identificador | Tipo     | Descrição | 
 | -------------- | ---------| :------------------------------------------          | 
 | 0~23           |  `array<string>`    | Data e hora do ping  |

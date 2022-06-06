@@ -32,7 +32,7 @@ Como parte da URI é necessário definir o mês e ano a ser consultado.
 
 
 ##### Parâmetros opcionais:
-| Indentificador | Tipo   | Default   |  Descrição                                                                        | 
+| Identificador | Tipo   | Default   |  Descrição                                                                        | 
 | :-------------- | -------| :--------:| :------------------------------------------------------------------------------   | 
 | limit          | `int`  |  **1000** | Quantidade de itens retornados na página de resultado                             |
 | offset     | `int`  |  **0**    | O número de documentos a serem ignorados no conjunto de resultados.                                           |
@@ -100,7 +100,7 @@ Para recuperar informações detalhadas de uma única peça comissionada para es
 ```
 ### Dicionário do Resultado:
 ##### Bloco PRINCIPAL:
-| Indentificador | Tipo | Descrição | 
+| Identificador | Tipo | Descrição | 
 | :------ | ---------| :-----------------------------------------                  | 
 | data   | `object` | Resultado da consulta                                        | 
 | total  | `int`    | Quantidade de itens encontrados                              | 
@@ -110,13 +110,13 @@ Para recuperar informações detalhadas de uma única peça comissionada para es
 | elapsedTime   | `string` | Tempo de duração da consulta                          | 
 
 ##### Bloco DATA:
-| Indentificador | Tipo | Descrição                                                | 
+| Identificador | Tipo | Descrição                                                | 
 | :------ | ---------| :------------------------------------------                 | 
 | type   | `string` | Identifica o tipo de indicador consultado                    | 
 | result| `array<object>` | Lista de peças encontradas                             |   
 
 ##### Bloco RESULT:
-| Indentificador | Tipo | Descrição | 
+| Identificador | Tipo | Descrição | 
 | ------------------- | ------   | :------------------------------------------     | 
 | etiqueta            | `string` | Identificador universal da luminária            | 
 | subPrefeitura       | `string` | Identificador da SubPrefeitura                  | 
@@ -126,7 +126,7 @@ Para recuperar informações detalhadas de uma única peça comissionada para es
 | historico           | `object` | Registra o histórico diário de interações da peça    |
 
 ##### Bloco HISTORICO:
-| Indentificador | Tipo     | Descrição | 
+| Identificador | Tipo     | Descrição | 
 | -------------- | ---------| :------------------------------------------          | 
 | status         | `int`  | 0 = Desligado, 1 = Ligado                            |
 | luminosidade   | `float`  | Entre 0 e 1 - Sendo que, quanto mais próximo do valor 0 deve ser considerado escuro e mais próximo do valor 1 deve ser condiderado claro. |

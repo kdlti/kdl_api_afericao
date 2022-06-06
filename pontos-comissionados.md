@@ -10,7 +10,7 @@ Como parte da URI é necessário definir o mês e ano a ser consultado.
 | GET | SIM | `/pontos-comissionados/0/0000` | api-afericao.kdltelegestao.com.br/pontos-comissionados/4/2022 |
 
 ##### Parâmetros opcionais:
-| Indentificador | Tipo   | Default   |  Descrição                                                                        | 
+| Identificador | Tipo   | Default   |  Descrição                                                                        | 
 | -------------- | -------| :--------:| :------------------------------------------------------------------------------   | 
 | limit          | `int`  |  **1000** | Quantidade de itens retornados na página de resultado                             |
 | offset     | `int`  |  **0**    | O número de documentos a serem ignorados no conjunto de resultados.                                           |
@@ -43,7 +43,7 @@ Como parte da URI é necessário definir o mês e ano a ser consultado.
 ```
 ### Dicionário do Resultado:
 ##### Bloco PRINCIPAL:
-| Indentificador | Tipo | Descrição | 
+| Identificador | Tipo | Descrição | 
 | :------ | ---------| :-----------------------------------------                  | 
 | data   | `object` | Resultado da consulta                                        | 
 | total  | `int`    | Quantidade de itens encontrados                              | 
@@ -53,13 +53,13 @@ Como parte da URI é necessário definir o mês e ano a ser consultado.
 | elapsedTime   | `string` | Tempo de duração da consulta                          | 
 
 ##### Bloco DATA:
-| Indentificador | Tipo | Descrição                                                | 
+| Identificador | Tipo | Descrição                                                | 
 | :------ | ---------| :------------------------------------------                 | 
 | type   | `string` | Identifica o tipo de indicador consultado                    | 
 | result| `array<object>` | Lista de peças encontradas                             |
 
 ##### Bloco RESULT:
-| Indentificador | Tipo | Descrição | 
+| Identificador | Tipo | Descrição | 
 | :------------------- | ------   | :------------------------------------------     | 
 | etiqueta            | `string` | Identificador universal da luminária            | 
 | subPrefeitura       | `string` | Identificador da SubPrefeitura                  | 
