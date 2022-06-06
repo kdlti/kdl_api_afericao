@@ -59,8 +59,8 @@ Como parte da URI é necessário definir o mês e ano a ser consultado.
 | result| `array<object>` | Lista de peças encontradas                             |
 
 ##### Bloco RESULT:
-| :Indentificador | Tipo | Descrição | 
-| ------------------- | ------   | :------------------------------------------     | 
+| Indentificador | Tipo | Descrição | 
+| :------------------- | ------   | :------------------------------------------     | 
 | etiqueta            | `string` | Identificador universal da luminária            | 
 | subPrefeitura       | `string` | Identificador da SubPrefeitura                  | 
 | comissionadoEm | `string`    | Data do comissionamento da luminária                | 
