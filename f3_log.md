@@ -9,7 +9,7 @@ O token de autorização deve ser enviado no header da consulta.
 const request = require('request');
 
 request({
-  url: 'http://api-afericao.kdltelegestao.com.br/a2/log/04/2022',
+  url: 'http://api-afericao.kdltelegestao.com/a2/log/04/2022',
   headers: {
      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c'
   },
@@ -27,7 +27,7 @@ Como parte da URI é necessário definir o mês e ano a ser consultado.
 
 | Método | URI | Exemplo                                                    | 
 | --- | --- | :-----------                                               | 
-| GET | `/f3/log/0/0000` | api-afericao.kdltelegestao.com.br/f3/log/4/2022 |
+| GET | `/f3/log/0/0000` | api-afericao.kdltelegestao.com/f3/log/4/2022 |
 
 ##### Parâmetros opcionais:
 | Identificador | Tipo   | Default   |  Descrição                                                                        | 

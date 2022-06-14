@@ -10,7 +10,7 @@ O token de autorização deve ser enviado no header da consulta.
 const request = require('request');
 
 request({
-  url: 'http://api-afericao.kdltelegestao.com.br/fdib/log/04/2022',
+  url: 'http://api-afericao.kdltelegestao.com/fdib/log/04/2022',
   headers: {
      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c'
   },
@@ -28,7 +28,7 @@ Como parte da URI é necessário definir o mês e ano a ser consultado.
 
 | Método | Parâmetros | URI | Exemplo                                                    | 
 | --- | :---: | --- |:-----------                                               | 
-| GET | SIM |`/fdib/log/00/0000` | api-afericao.kdltelegestao.com.br/fdib/log/04/2022 |
+| GET | SIM |`/fdib/log/00/0000` | api-afericao.kdltelegestao.com/fdib/log/04/2022 |
 
 ##### Parâmetros opcionais:
 | Identificador | Tipo   | Default   |  Descrição                                                                        | 
@@ -46,14 +46,14 @@ Para recuperar informações detalhadas de um conjunto de amostras de peças com
 
 | Método | Parâmetros |  URI |  Exemplo      | 
 | --- | :---: | --- |  :----------- | 
-| POST | SIM |`/fdib/log/00/0000` | api-afericao.kdltelegestao.com.br/fdib/log/04/2022 | 
+| POST | SIM |`/fdib/log/00/0000` | api-afericao.kdltelegestao.com/fdib/log/04/2022 | 
 
 ```javascript
 var request = require('request');
 var listaAmostras = ["IP00000A", "IP00000B"]; // <--Array-Json
 
 request({
-    url: "http://api-afericao.kdltelegestao.com.br/fdib/log/04/2022",
+    url: "http://api-afericao.kdltelegestao.com/fdib/log/04/2022",
     headers: {
      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c'
     },
@@ -70,7 +70,7 @@ Para recuperar informações detalhadas de uma única peça comissionada para es
 
 | Método |  Parâmetros | URI |  Exemplo      | 
 | --- | :---: | --- | :----------- | 
-| GET | NÃO |`/fdib/log/00/0000/IP00000A` | api-afericao.kdltelegestao.com.br/fdib/log/04/2022/IP00000A | 
+| GET | NÃO |`/fdib/log/00/0000/IP00000A` | api-afericao.kdltelegestao.com/fdib/log/04/2022/IP00000A | 
 
 ### Exemplo do Resultado:
 ``` json

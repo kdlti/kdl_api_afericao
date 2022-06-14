@@ -7,7 +7,7 @@ Como parte da URI é necessário definir o mês e ano a ser consultado.
 
 | Método |  Parâmetros | URI | Exemplo                                                    | 
 | --- | :---: | --- | :-----------                                               | 
-| GET | SIM | `/pontos-comissionados/0/0000` | api-afericao.kdltelegestao.com.br/pontos-comissionados/4/2022 |
+| GET | SIM | `/pontos-comissionados/0/0000` | api-afericao.kdltelegestao.com/pontos-comissionados/4/2022 |
 
 ##### Parâmetros opcionais:
 | Identificador | Tipo   | Default   |  Descrição                                                                        | 
