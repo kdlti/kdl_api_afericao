@@ -10,7 +10,7 @@ O token de autorização deve ser enviado no header da consulta.
 const request = require('request');
 
 request({
-  url: 'https://api-afericao.kdltelegestao.com.br/f1/log/04/2022/IP00000A?hora=15',
+  url: 'http://api-afericao.kdltelegestao.com.br/f1/log/04/2022/IP00000A?hora=15',
   headers: {
      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c'
   },

@@ -10,7 +10,7 @@ O token de autorização deve ser enviado no header da consulta.
 const request = require('request');
 
 request({
-  url: 'https://api-afericao.kdltelegestao.com.br/fdib/04/2022',
+  url: 'http://api-afericao.kdltelegestao.com.br/fdib/04/2022',
   headers: {
      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c'
   },
@@ -52,7 +52,7 @@ var request = require('request');
 var listaAmostras = ["IP00000A", "IP00000B"]; // <--Array-Json
 
 request({
-    url: "https://api-afericao.kdltelegestao.com.br/fdib/04/2022",
+    url: "http://api-afericao.kdltelegestao.com.br/fdib/04/2022",
     headers: {
      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c'
     },
