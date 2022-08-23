@@ -14,8 +14,6 @@ Este documento apresenta orientações de uso para a **API de Aferição** da te
 
 [F1](f1.md)
 
-[F1 - LOG](f1_log.md) **(API NÃO IMPLEMENTADA)**
-
 [F2](f2.md)
 
 [F2 - LOG](f2_log.md)
