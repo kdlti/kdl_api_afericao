@@ -104,4 +104,3 @@ como luminária apagada(sem registro no F2), e nenhum evento de `horaApagou` é 
 Os valores de ‘tempoLigadoParcial / tempoLigadoDecorrido‘ são registrados pela peça a partir da 00:00:00hs de cada dia, 
 independente das leituras realizadas, dessa forma sendo confiáveis o bastante para serem utilizados em cálculos do tempo 
 ligado da peça.
-
