@@ -45,23 +45,25 @@ Como parte da URI é necessário definir o dia/mês/ano a ser consultado.
             }
         ]
     },
-    "total": 1,
+    "total": 100,
+    "totalRetornado": 8,
     "offset": 0,
-    "limit": 1,
+    "limit": 10,
     "success": true,
     "elapsedTime": "157.784032ms"
 }
 ```
 ### Dicionário do Resultado:
 ##### Bloco PRINCIPAL:
-| Identificador | Tipo     | Descrição                                                           | 
-|:--------------|----------|:--------------------------------------------------------------------| 
-| data          | `object` | Resultado da consulta                                               | 
-| total         | `int`    | Quantidade de itens encontrados                                     | 
-| limit         | `int`    | Quantidade de itens retornados por página                           | 
-| offset        | `int`    | O número de documentos a serem ignorados no conjunto de resultados. |
-| success       | `bool`   | Status de sucesso/falha da interação                                | 
-| elapsedTime   | `string` | Tempo de duração da consulta                                        | 
+| Identificador  | Tipo     | Descrição                                                           | 
+|:---------------|----------|:--------------------------------------------------------------------| 
+| data           | `object` | Resultado da consulta                                               | 
+| total          | `int`    | Quantidade de itens encontrados                                     | 
+| totalRetornado | `int64`  | Quantidade de itens retornados                                      |
+| limit          | `int`    | Quantidade de itens retornados por página                           | 
+| offset         | `int`    | O número de documentos a serem ignorados no conjunto de resultados. |
+| success        | `bool`   | Status de sucesso/falha da interação                                | 
+| elapsedTime    | `string` | Tempo de duração da consulta                                        | 
 
 ##### Bloco DATA:
 | Identificador | Tipo            | Descrição                                             | 

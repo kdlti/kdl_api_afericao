@@ -48,7 +48,8 @@ Como parte da URI é necessário definir o mês e ano a ser consultado.
 | Identificador | Tipo     | Descrição                                                           | 
 |:--------------|----------|:--------------------------------------------------------------------| 
 | data          | `object` | Resultado da consulta                                               | 
-| total         | `int`    | Quantidade de itens encontrados                                     | 
+| total         | `int`    | Quantidade de itens encontrados                                     |
+| totalRetornado | `int64`  | Quantidade de itens retornados                                     |
 | limit         | `int`    | Quantidade de itens retornados por página                           | 
 | offset        | `int`    | O número de documentos a serem ignorados no conjunto de resultados. |
 | success       | `bool`   | Status de sucesso/falha da interação                                | 
