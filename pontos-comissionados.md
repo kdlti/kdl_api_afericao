@@ -37,6 +37,7 @@ Como parte da URI é necessário definir o mês e ano a ser consultado.
         ]
     },
     "total": 1,
+    "totalRetornado": 8,
     "offset": 0,
     "limit": 1,
     "success": true,
