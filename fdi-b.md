@@ -8,7 +8,9 @@ Como parte da URI é necessário definir o dia/mês/ano a ser consultado.
 
 | Método | URI                | Exemplo                                                    | 
 | --- | --------------------| :-----------   | 
-| GET | `/fdib/00/00/0000` | api-afericao.kdltelegestao.com/fdib/01/08/2022 |
+| GET | `/fdib/00/00/0000` | api-afericao.kdltelegestao.com/fdib/01/08/2022            |
+| GET | `/fdib/etiqueta`   | api-afericao.kdltelegestao.com/fdib/IP0505344             |
+| GET | `/fdib/etiqueta/00/00/0000`   | api-afericao.kdltelegestao.com/fdib/IP0505344/01/08/2022  |
 
 ##### Parâmetros opcionais:
 | Identificador | Tipo   | Default   | Descrição                       | 
