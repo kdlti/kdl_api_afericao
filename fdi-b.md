@@ -1,26 +1,30 @@
 # Indicador FDI-b
 ### KDL API REST para Aferição de Indicadores
-*versão 2.0.0*
+*versão 4.0.4*
 
 Este endpoint é resposável pela entrega de informações da telegestão do indicador FDI-b.
 
 Como parte da URI é necessário definir o dia/mês/ano a ser consultado.
 
-| Método | URI                | Exemplo                                                    | 
-| --- | --------------------| :-----------   | 
-| GET | `/fdib/00/00/0000` | api-afericao.kdltelegestao.com/fdib/01/08/2022            |
-| GET | `/fdib/etiqueta`   | api-afericao.kdltelegestao.com/fdib/IP0505344             |
-| GET | `/fdib/etiqueta/00/00/0000`   | api-afericao.kdltelegestao.com/fdib/IP0505344/01/08/2022  |
+| Método | URI                                 | Exemplo                                                          | 
+| --- |-------------------------------------|:-----------------------------------------------------------------| 
+| GET | `/fdib/00/00/0000`                  | api-afericao.kdltelegestao.com/fdib/01/08/2022                   |
+| GET | `/fdib/etiqueta`                    | api-afericao.kdltelegestao.com/fdib/IP0505344                    |
+| GET | `/fdib/etiqueta/00/00/0000`         | api-afericao.kdltelegestao.com/fdib/IP0505344/01/08/2022         |
+| GET | `/changes/fdib/00/00/0000` | api-afericao.kdltelegestao.com/changes/fdib/01/08/2022 |
+
+**Nota:** O endpoint `changes` retorna todos os registros atualizados a partir da data fornecida até a data atual.
 
 ##### Parâmetros opcionais:
-| Identificador | Tipo   | Default   | Descrição                       | 
-| -------------- | -------| :--------:|:--------------------------------| 
-| limit          | `int`  |  **1000** | Quantidade de itens retornados. |
-| offset     | `int`  |  **0**    | Paginação do resultado.         |
+| Identificador | Tipo     |     Default     | Descrição                                                                                                                                                                | 
+|---------------|----------|:---------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+| limit         | `int`    |    **1000**     | Quantidade de itens retornados.                                                                                                                                          |
+| offset        | `int`    |      **0**      | Paginação do resultado.                                                                                                                                                  |
+| count         | `string` | **true/false** | Indica se deve retornar a contagem de documentos na mesma consulta. O tempo para retornar a contagem de documento pode ser 3 vezes MENOR sem a utilização desse recurso. |
 
-| Exemplo de uso dos parâmetros | 
-|:------------------------------| 
-| ?limit=200&offset=400         |
+| Exemplo de uso dos parâmetros    | 
+|:---------------------------------| 
+| ?limit=200&offset=400&count=true |
 
 ### Exemplo do Resultado:
 ``` json
