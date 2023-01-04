@@ -6,12 +6,12 @@ Este endpoint é resposável pela entrega de informações da telegestão do ind
 
 Como parte da URI é necessário definir o dia/mês/ano a ser consultado.
 
-| Método | URI                                 | Exemplo                                                  | 
-| --- |-------------------------------------|:---------------------------------------------------------| 
-| GET | `/fdib/v4/00/00/0000`                  | api-afericao.kdltelegestao.com/fdib/v4/01/08/2022        |
-| GET | `/fdib/v4/etiqueta`                    | api-afericao.kdltelegestao.com/fdib/v4/IP0505344            |
-| GET | `/fdib/v4/etiqueta/00/00/0000`         | api-afericao.kdltelegestao.com/fdib/v4/IP0505344/01/08/2022 |
-| GET | `/changes/v4/fdib/00/00/0000` | api-afericao.kdltelegestao.com/changes/fdib/v4/01/08/2022   |
+| Método | URI                            | Exemplo                                                  | 
+| --- |--------------------------------|:---------------------------------------------------------| 
+| GET | `/fdib/v4/00/00/0000`          | api-afericao.kdltelegestao.com/fdib/v4/01/08/2022        |
+| GET | `/fdib/v4/etiqueta`            | api-afericao.kdltelegestao.com/fdib/v4/IP0505344            |
+| GET | `/fdib/v4/etiqueta/00/00/0000` | api-afericao.kdltelegestao.com/fdib/v4/IP0505344/01/08/2022 |
+| GET | `/changes/fdib/v4/00/00/0000`  | api-afericao.kdltelegestao.com/changes/fdib/v4/01/08/2022   |
 
 **Nota:** O endpoint `changes` retorna todos os registros atualizados a partir da data fornecida até a data atual.
 
