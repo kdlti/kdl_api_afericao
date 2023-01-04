@@ -89,7 +89,7 @@ Como parte da URI é necessário definir o dia/mês/ano a ser consultado.
 | latitude              | `string` | Latitude                                                        |
 | longitude             | `string` | Longitude                                                       |
 | lux                   | `string` | Luminosidade do ambiente 0~1 = 0:escuro/1:claro                 | 
-| tempoLigadoParcial    | `int`    | Tempo ligado parcial (contador inicia 00:00:00hs)               | 
+| tempoLigadoParcial    | `string`    | Tempo ligado parcial (contador inicia 00:00:00hs)               | 
 | tempoLigadoDecorrido  | `string` | Tempo ligado decorrido a partir das 00:00:00hs                  | 
 | coletaPecaDecorrido   | `string` | Tempo decorrido entre as leituras da peça                       | 
 | horaAcendeu           | `string` | Momento que a luminária acendeu dentro do intervalo da leitura  | 
