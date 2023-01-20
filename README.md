@@ -11,5 +11,3 @@ Este documento apresenta orientações de uso para a **API de Aferição** da te
 [F2](f2.md)
 
 [F3](f3.md)
-
-[Pontos Comissionados](pontos-comissionados.md)

@@ -12,9 +12,6 @@ Como parte da URI é necessário definir o dia/mês/ano a ser consultado.
 | GET | `/fdib/v5/etiqueta`            | api-afericao.kdltelegestao.com/fdib/v5/IP0322471            |
 | GET | `/fdib/v5/etiqueta/00/00/0000` | api-afericao.kdltelegestao.com/fdib/v5/IP0322471/01/01/2023|
 
-
-**Nota:** O endpoint `changes` retorna todos os registros atualizados a partir da data fornecida até a data atual.
-
 ##### Parâmetros opcionais:
 | Identificador | Tipo     |     Default     | Descrição                                                                                                                                                                | 
 |---------------|----------|:---------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
