@@ -1,6 +1,6 @@
 # Indicador FDI-b
 ### KDL API REST para Aferição de Indicadores
-*versão 4.0.4*
+*versão 5.0.0*
 
 Este endpoint é resposável pela entrega de informações da telegestão do indicador FDI-b.
 
@@ -8,10 +8,10 @@ Como parte da URI é necessário definir o dia/mês/ano a ser consultado.
 
 | Método | URI                            | Exemplo                                                  | 
 | --- |--------------------------------|:---------------------------------------------------------| 
-| GET | `/fdib/v4/00/00/0000`          | api-afericao.kdltelegestao.com/fdib/v4/01/08/2022        |
-| GET | `/fdib/v4/etiqueta`            | api-afericao.kdltelegestao.com/fdib/v4/IP0505344            |
-| GET | `/fdib/v4/etiqueta/00/00/0000` | api-afericao.kdltelegestao.com/fdib/v4/IP0505344/01/08/2022 |
-| GET | `/changes/fdib/v4/00/00/0000`  | api-afericao.kdltelegestao.com/changes/fdib/v4/01/08/2022   |
+| GET | `/fdib/v5/00/00/0000`          | api-afericao.kdltelegestao.com/fdib/v5/01/01/2023       |
+| GET | `/fdib/v5/etiqueta`            | api-afericao.kdltelegestao.com/fdib/v5/IP0322471            |
+| GET | `/fdib/v5/etiqueta/00/00/0000` | api-afericao.kdltelegestao.com/fdib/v5/IP0322471/01/01/2023|
+
 
 **Nota:** O endpoint `changes` retorna todos os registros atualizados a partir da data fornecida até a data atual.
 
@@ -37,7 +37,7 @@ Como parte da URI é necessário definir o dia/mês/ano a ser consultado.
                 "coletaRede": "2022-08-01T00:00:00Z",
                 "coletaPeca": "2022-08-01T00:00:00Z",
                 "comissionadoEm": "2022-07-01T00:00:00Z",
-                "etiqueta": "IP0505344",
+                "etiqueta": "IP0322471",
                 "latitude": "-23.52501",
                 "longitude": "-46.71013",
                 "subPrefeitura": "LAPA",
