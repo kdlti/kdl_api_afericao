@@ -61,11 +61,11 @@ async function exemploCompleto() {
     console.log('✅ Login realizado com sucesso');
     
     // 2. Buscar dados FDI-b do dia 01/01/2023
-    const fdibData = await apiRequest('/fdib/v5/01/01/2023', token);
+    const fdibData = await apiRequest('/fdib/v7/01/01/2023', token);
     console.log(`📊 FDI-b: ${fdibData.total} registros encontrados`);
     
     // 3. Buscar uma etiqueta específica
-    const etiquetaData = await apiRequest('/fdib/v5/IP0322471', token);
+    const etiquetaData = await apiRequest('/fdib/v7/IP0322471', token);
     console.log(`🏷️ Dados da etiqueta IP0322471:`, etiquetaData.data.result[0]);
     
   } catch (error) {
@@ -116,7 +116,7 @@ class KDLApi:
     
     def get_fdib(self, dia, mes, ano, limit=1000, offset=0):
         """Busca dados FDI-b para uma data específica"""
-        url = f"{self.base_url}/fdib/v5/{dia:02d}/{mes:02d}/{ano}"
+        url = f"{self.base_url}/fdib/v7/{dia:02d}/{mes:02d}/{ano}"
         params = {"limit": limit, "offset": offset}
         
         response = requests.get(url, headers=self.get_headers(), params=params)
@@ -127,9 +127,9 @@ class KDLApi:
     def get_etiqueta_fdib(self, etiqueta, dia=None, mes=None, ano=None):
         """Busca dados de uma etiqueta específica"""
         if dia and mes and ano:
-            url = f"{self.base_url}/fdib/v5/{etiqueta}/{dia:02d}/{mes:02d}/{ano}"
+            url = f"{self.base_url}/fdib/v7/{etiqueta}/{dia:02d}/{mes:02d}/{ano}"
         else:
-            url = f"{self.base_url}/fdib/v5/{etiqueta}"
+            url = f"{self.base_url}/fdib/v7/{etiqueta}"
         
         response = requests.get(url, headers=self.get_headers())
         response.raise_for_status()
@@ -190,7 +190,7 @@ class RelatorioLuminariaes {
   }
 
   async gerarRelatorioStatus(dia, mes, ano) {
-    const endpoint = `/fdib/v5/${String(dia).padStart(2, '0')}/${String(mes).padStart(2, '0')}/${ano}`;
+    const endpoint = `/fdib/v7/${String(dia).padStart(2, '0')}/${String(mes).padStart(2, '0')}/${ano}`;
     
     const response = await fetch(`${this.baseUrl}${endpoint}?count=true`, {
       headers: {
@@ -412,13 +412,13 @@ class KDLApiClient {
 
   // Métodos de conveniência
   async getFdib(dia, mes, ano, options = {}) {
-    const endpoint = `/fdib/v5/${String(dia).padStart(2, '0')}/${String(mes).padStart(2, '0')}/${ano}`;
+    const endpoint = `/fdib/v7/${String(dia).padStart(2, '0')}/${String(mes).padStart(2, '0')}/${ano}`;
     const params = new URLSearchParams(options);
     return this.makeRequestWithRetry(`${endpoint}?${params}`);
   }
 
   async getEtiqueta(etiqueta, tipo = 'fdib') {
-    return this.makeRequestWithRetry(`/${tipo}/v5/${etiqueta}`);
+    return this.makeRequestWithRetry(`/${tipo}/v7/${etiqueta}`);
   }
 }
 ```

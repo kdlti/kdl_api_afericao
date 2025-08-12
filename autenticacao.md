@@ -79,14 +79,14 @@ Authorization: Bearer SEU_TOKEN_AQUI
 
 ##### cURL
 ```bash
-curl -X GET "https://simcidadesinteligentes.com.br:44300/fdib/v5/01/01/2023" \
+curl -X GET "https://simcidadesinteligentes.com.br:44300/fdib/v7/01/01/2023" \
      -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." \
      -H "Content-Type: application/json"
 ```
 
 ##### JavaScript (Fetch)
 ```javascript
-const apiResponse = await fetch('https://simcidadesinteligentes.com.br:44300/fdib/v5/01/01/2023', {
+const apiResponse = await fetch('https://simcidadesinteligentes.com.br:44300/fdib/v7/01/01/2023', {
   method: 'GET',
   headers: {
     'Authorization': `Bearer ${token}`,
@@ -99,7 +99,7 @@ const data = await apiResponse.json();
 
 ##### Python (requests)
 ```python
-api_url = "https://simcidadesinteligentes.com.br:44300/fdib/v5/01/01/2023"
+api_url = "https://simcidadesinteligentes.com.br:44300/fdib/v7/01/01/2023"
 headers = {
     "Authorization": f"Bearer {token}",
     "Content-Type": "application/json"
@@ -176,7 +176,7 @@ class KDLApiClient {
 
 // Uso
 const client = new KDLApiClient();
-const data = await client.makeRequest('/fdib/v5/01/01/2023');
+const data = await client.makeRequest('/fdib/v7/01/01/2023');
 ```
 
 ## 🔒 Boas Práticas de Segurança

@@ -48,7 +48,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 #### Exemplo com cURL:
 ```bash
-curl -X GET "https://simcidadesinteligentes.com.br:44300/fdib/v5/01/01/2023" \
+curl -X GET "https://simcidadesinteligentes.com.br:44300/fdib/v7/01/01/2023" \
      -H "Authorization: Bearer SEU_TOKEN_AQUI" \
      -H "Content-Type: application/json"
 ```
@@ -83,7 +83,7 @@ Exemplos completos em JavaScript, Python e HTML para:
 - 🕐 **Tokens Temporários**: Os tokens JWT têm validade limitada
 - 🔒 **HTTPS**: Todas as comunicações são criptografadas via HTTPS
 - 📊 **Rate Limiting**: A API pode ter limites de requisições por minuto
-- 🧩 **Versionamento**: Use sempre a versão mais recente dos endpoints (v5)
+- 🧩 **Versionamento**: Use sempre a versão mais recente dos endpoints (v7)
 
 ## 🛠️ Status Codes
 

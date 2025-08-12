@@ -40,32 +40,32 @@ Authorization: Bearer SEU_TOKEN_JWT
 ### FDI-b
 | Endpoint | URL Anterior | URL Nova |
 |----------|-------------|----------|
-| Por data | `api-afericao.kdltelegestao.com/fdib/v5/01/01/2023` | `https://simcidadesinteligentes.com.br:44300/fdib/v5/01/01/2023` |
-| Por etiqueta | `api-afericao.kdltelegestao.com/fdib/v5/IP0322471` | `https://simcidadesinteligentes.com.br:44300/fdib/v5/IP0322471` |
+| Por data | `api-afericao.kdltelegestao.com/fdib/v7/01/01/2023` | `https://simcidadesinteligentes.com.br:44300/fdib/v7/01/01/2023` |
+| Por etiqueta | `api-afericao.kdltelegestao.com/fdib/v7/IP0322471` | `https://simcidadesinteligentes.com.br:44300/fdib/v7/IP0322471` |
 
 ### A2
 | Endpoint | URL Anterior | URL Nova |
 |----------|-------------|----------|
-| Por data | `api-afericao.kdltelegestao.com/a2/v5/01/01/2023` | `https://simcidadesinteligentes.com.br:44300/a2/v5/01/01/2023` |
-| Por etiqueta | `api-afericao.kdltelegestao.com/a2/v5/IP0322471` | `https://simcidadesinteligentes.com.br:44300/a2/v5/IP0322471` |
-| Changes | `api-afericao.kdltelegestao.com/changes/a2/v5/01/01/2023` | `https://simcidadesinteligentes.com.br:44300/changes/a2/v5/01/01/2023` |
+| Por data | `api-afericao.kdltelegestao.com/a2/v7/01/01/2023` | `https://simcidadesinteligentes.com.br:44300/a2/v7/01/01/2023` |
+| Por etiqueta | `api-afericao.kdltelegestao.com/a2/v7/IP0322471` | `https://simcidadesinteligentes.com.br:44300/a2/v7/IP0322471` |
+| Changes | `api-afericao.kdltelegestao.com/changes/a2/v7/01/01/2023` | `https://simcidadesinteligentes.com.br:44300/changes/a2/v7/01/01/2023` |
 
 ### F1
 | Endpoint | URL Anterior | URL Nova |
 |----------|-------------|----------|
-| Lista | `http://api-afericao.kdltelegestao.com/f1/v5?limit=1000&offset=0` | `https://simcidadesinteligentes.com.br:44300/f1/v5?limit=1000&offset=0` |
+| Lista | `http://api-afericao.kdltelegestao.com/f1/v7?limit=1000&offset=0` | `https://simcidadesinteligentes.com.br:44300/f1/v7?limit=1000&offset=0` |
 
 ### F2
 | Endpoint | URL Anterior | URL Nova |
 |----------|-------------|----------|
-| Por data | `api-afericao.kdltelegestao.com/f2/v5/01/01/2023` | `https://simcidadesinteligentes.com.br:44300/f2/v5/01/01/2023` |
-| Por etiqueta | `api-afericao.kdltelegestao.com/f2/v5/IP0322471` | `https://simcidadesinteligentes.com.br:44300/f2/v5/IP0322471` |
+| Por data | `api-afericao.kdltelegestao.com/f2/v7/01/01/2023` | `https://simcidadesinteligentes.com.br:44300/f2/v7/01/01/2023` |
+| Por etiqueta | `api-afericao.kdltelegestao.com/f2/v7/IP0322471` | `https://simcidadesinteligentes.com.br:44300/f2/v7/IP0322471` |
 
 ### F3
 | Endpoint | URL Anterior | URL Nova |
 |----------|-------------|----------|
-| Por data | `api-afericao.kdltelegestao.com/f3/v5/01/01/2023` | `https://simcidadesinteligentes.com.br:44300/f3/v5/01/01/2023` |
-| Por etiqueta | `api-afericao.kdltelegestao.com/f3/v5/IP0322471` | `https://simcidadesinteligentes.com.br:44300/f3/v5/IP0322471` |
+| Por data | `api-afericao.kdltelegestao.com/f3/v7/01/01/2023` | `https://simcidadesinteligentes.com.br:44300/f3/v7/01/01/2023` |
+| Por etiqueta | `api-afericao.kdltelegestao.com/f3/v7/IP0322471` | `https://simcidadesinteligentes.com.br:44300/f3/v7/IP0322471` |
 
 ### Pontos Comissionados
 | Endpoint | URL Anterior | URL Nova |
@@ -88,14 +88,14 @@ Authorization: Bearer SEU_TOKEN_JWT
 
 1. **Estrutura dos dados**: Os JSONs de resposta continuam os mesmos
 2. **Parâmetros**: `limit`, `offset`, `count` funcionam igual
-3. **Versionamento**: Continua sendo v5
+3. **Versionamento**: Continua sendo v7
 4. **Códigos de status**: 200, 404, etc. funcionam igual
 
 ### 3. 🔄 Exemplo de Migração
 
 #### ❌ Código Antigo:
 ```javascript
-const response = await fetch('api-afericao.kdltelegestao.com/fdib/v5/01/01/2023');
+const response = await fetch('api-afericao.kdltelegestao.com/fdib/v7/01/01/2023');
 const data = await response.json();
 ```
 
@@ -111,7 +111,7 @@ const loginData = await loginResponse.json();
 const token = loginData.token;
 
 // 2. Usar token nas requisições
-const response = await fetch('https://simcidadesinteligentes.com.br:44300/fdib/v5/01/01/2023', {
+const response = await fetch('https://simcidadesinteligentes.com.br:44300/fdib/v7/01/01/2023', {
   headers: {
     'Authorization': `Bearer ${token}`,
     'Content-Type': 'application/json'
