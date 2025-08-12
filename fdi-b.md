@@ -2,15 +2,37 @@
 ### KDL API REST para Aferição de Indicadores
 *versão 5.0.0*
 
+🔐 **ATENÇÃO**: Este endpoint requer autenticação JWT. Inclua o token Bearer no cabeçalho Authorization.
+
 Este endpoint é resposável pela entrega de informações da telegestão do indicador FDI-b.
 
 Como parte da URI é necessário definir o dia/mês/ano a ser consultado.
 
+## 🌐 URL Base
+```
+https://simcidadesinteligentes.com.br:44300
+```
+
 | Método | URI                            | Exemplo                                                  | 
 | --- |--------------------------------|:---------------------------------------------------------| 
-| GET | `/fdib/v5/00/00/0000`          | api-afericao.kdltelegestao.com/fdib/v5/01/01/2023       |
-| GET | `/fdib/v5/etiqueta`            | api-afericao.kdltelegestao.com/fdib/v5/IP0322471            |
-| GET | `/fdib/v5/etiqueta/00/00/0000` | api-afericao.kdltelegestao.com/fdib/v5/IP0322471/01/01/2023|
+| GET | `/fdib/v5/00/00/0000`          | https://simcidadesinteligentes.com.br:44300/fdib/v5/01/01/2023       |
+| GET | `/fdib/v5/etiqueta`            | https://simcidadesinteligentes.com.br:44300/fdib/v5/IP0322471            |
+| GET | `/fdib/v5/etiqueta/00/00/0000` | https://simcidadesinteligentes.com.br:44300/fdib/v5/IP0322471/01/01/2023|
+
+## 🔒 Autenticação
+
+Todas as requisições devem incluir o token Bearer no cabeçalho:
+
+```bash
+Authorization: Bearer SEU_TOKEN_JWT
+```
+
+### Exemplo com cURL:
+```bash
+curl -X GET "https://simcidadesinteligentes.com.br:44300/fdib/v5/01/01/2023" \
+     -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ..." \
+     -H "Content-Type: application/json"
+```
 
 ##### Parâmetros opcionais:
 | Identificador | Tipo     |     Default     | Descrição                                                                                                                                                                | 

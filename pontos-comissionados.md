@@ -1,13 +1,35 @@
 # Indicador Pontos Comissionados
 ### KDL API REST para Aferição de Indicadores
 
+🔐 **ATENÇÃO**: Este endpoint requer autenticação JWT. Inclua o token Bearer no cabeçalho Authorization.
+
 Este endpoint é resposável pela entrega de informações da telegestão dos pontos comissionados.
 
 Como parte da URI é necessário definir o mês e ano a ser consultado.
 
+## 🌐 URL Base
+```
+https://simcidadesinteligentes.com.br:44300
+```
+
 | Método |  URI | Exemplo                                                                         | 
 | --- |  --- |:--------------------------------------------------------------------------------| 
-| GET |  `/pontos-comissionados?limit&offset` | http://api-afericao.kdltelegestao.com/pontos-comissionados?limit=1000&offset=0 |
+| GET |  `/pontos-comissionados?limit&offset` | https://simcidadesinteligentes.com.br:44300/pontos-comissionados?limit=1000&offset=0 |
+
+## 🔒 Autenticação
+
+Todas as requisições devem incluir o token Bearer no cabeçalho:
+
+```bash
+Authorization: Bearer SEU_TOKEN_JWT
+```
+
+### Exemplo com cURL:
+```bash
+curl -X GET "https://simcidadesinteligentes.com.br:44300/pontos-comissionados?limit=1000&offset=0" \
+     -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ..." \
+     -H "Content-Type: application/json"
+```
 
 ##### Parâmetros opcionais:
 | Identificador | Tipo   | Default   |  Descrição                                                                        | 
