@@ -99,9 +99,9 @@ Exemplos completos em JavaScript, Python e HTML para:
 ## 🆘 Suporte
 
 Para suporte técnico ou dúvidas sobre a API:
-- 📧 E-mail: suporte@kdltelegestao.com
-- 📞 Telefone: +55 (11) 99999-9999
-- 🌐 Website: [kdltelegestao.com](https://kdltelegestao.com)
+- 📧 E-mail: suporte@kdliluminacao.com.br
+- 📞 Telefone: +55 (11) 99281-7280
+- 🌐 Website: [kdliluminacao.com.br](https://kdliluminacao.com.br)
 
 ## 📋 Documentação Adicional
 
